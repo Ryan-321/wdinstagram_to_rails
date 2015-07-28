@@ -1,0 +1,25 @@
+<h1>Awesome WDI Photos</h1>
+
+
+  <% @pictures.each do |picture| %>
+<ul>
+    <li>
+      <a href='/pictures/<%= picture.id %>'>
+        <%= picture.author %>
+      </a>
+    </li>
+    <li>
+      <p>Date Created <%= picture.date_taken %></p>
+    </li>
+    <li>
+      <img src='<%= picture.photo_url %>'>
+    </li>
+    <li>
+      <p><%= picture.captions %></p>
+    </li>
+</ul>
+    <% end %>
+
+        <a href="/pictures/new">Create New Picture</a>
+
+        <a href="/">Home</a>
